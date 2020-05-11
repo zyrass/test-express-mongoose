@@ -1,0 +1,27 @@
+{
+  "name": "express_mongoose",
+  "version": "1.0.0",
+  "description": "> Je vais via tenter via ce mini projet perso, de mettre en application ce que j'ai appris sur Dyma.fr avec la création d'un serveur sur la gestion des livres. > Je vais tenter de créer des pages spécifique selon la requête souhaité.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zyrass/test-express-mongoose.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zyrass/test-express-mongoose/issues"
+  },
+  "homepage": "https://github.com/Zyrass/test-express-mongoose#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.3",
+    "pug": "^2.0.4"
+  }
+}
