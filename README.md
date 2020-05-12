@@ -1,12 +1,24 @@
 # Express / Mongoose
 
+
+```diff
+- ACTUELLEMENT il y énormémément d'erreur de syntaxe.
+```
+
 > Je vais via tenter via ce mini projet perso, de mettre en application ce que j'ai appris sur Dyma.fr avec la création d'un serveur sur la gestion des livres.
 > Je vais tenter de créer des pages spécifique selon la requête souhaité.
 
 ## Ressources utile pour le projet
 
 ```pug
+//- CSS BOOSTRAP
 link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous")
+```
+
+```js
+// Pour les messages d'erreur sur plusieurs niveaux
+const util = require('util');
+console.log(util.inspect(err, { compact: true, depth: 5, breakLength: 80 , colors: true}));
 ```
 
 ## Détails des opérations

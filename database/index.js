@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
  * * ---------------------------------------------------------------------
  */
 mongoose
-    .connect('mongodb+srv://public:public@dyma-noq8b.mongodb.net/test?retryWrites=true', {
+    .connect('mongodb+srv://alain:Aa2fe1aec4.2020@dyma-noq8b.mongodb.net/test?retryWrites=true', {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		useFindAndModify: false,

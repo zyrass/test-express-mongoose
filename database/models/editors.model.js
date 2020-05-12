@@ -11,10 +11,16 @@ const editorSchema = mongoose.Schema(
 		name: {
 			type: String,
 			required: [true, "Le champ Nom est requis"],
-			index: true,
 			minLength: [5, "Le Nom doit contenir 5 caractères minimum"],
-			maxLength: [25, "Le Nom doit contenir 25 caractères maximum"]
+			maxLength: [25, "Le Nom doit contenir 25 caractères maximum"],
+			index: true,
 		},
+		info: {
+			adress: {type: String, default: "A venir" },
+			code_postal: {type: Number, default: 75000},
+			city: {type: String, default: "France" }
+		},
+		active: Boolean,
 		index: Number
 	},
 	{

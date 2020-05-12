@@ -1,19 +1,18 @@
 require('colors');
-const path          = require('path');      // Module natif de node
-const morgan        = require('morgan');    // Dépendance Morgan
-const express       = require('express');   // Dépendance Express
+const path = require('path'); // Module natif de node
+const morgan = require('morgan'); // Dépendance Morgan
+const express = require('express'); // Dépendance Express
 
-const app           = express();
+const app = express();
 
 // Utilisation de la base de donnée MongoDB Atlas
 require('./database/index');
 
 // Imports de mes routes
-const api           = require('./routes/api');
-const index         = require('./routes/index');
+const routing = require('./routes');
 
-// Définition d'un port et si il est utilisé on va prendre 5001
-const port          = process.env.PORT || 5001;
+// Définition d'un port et si il est utilisé on va prendre 5005
+const port = process.env.PORT || 5005;
 
 // Définition du dossier ou sera stocké mes vues
 // Définition de l'extension des fichiers qui sera utilisé.
@@ -25,7 +24,6 @@ app.use(express.static(path.join(__dirname, 'public'))); // Définit ou je vais 
 app.use(express.json());
 app.use(express.urlencoded({ extended   : true })); // Permet d'être tranquille avec un content-type spécifique des formulaires.
 
-app.use('/api/v1', api);  // Tout ce qui touche à l'URL : /api/v1
-app.use(index);           // URL par défaut : /  
+app.use(routing);
 
 app.listen(port);

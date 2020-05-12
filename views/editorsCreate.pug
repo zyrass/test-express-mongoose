@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+    div(class="d-flex flex-column align-items-center justify-content-center w-100 rows" style="height:100vh;")
+        h1 Ajouter un nouvel éditeur
+        form(class="d-flex flex-column card w-50" method="post" action="/api/v1/editeurs/create")
+            div(class="card-body")
+                div(class="form-group")
+                    label Nom de l'éditeur
+                    input(name="name" class="form-control" type="text")
+
+                div(class="form-group")
+                    label Code Postal
+                    input(name="code_postal" class="form-control" type="number")
+
+                div(class="form-group")
+                    input(name="active" class="form-checkbox-control" type="checkbox" id="active")
+                    label(class="form-check-label ml-2" for="active") active
+
+                - if ( locals.errors && errors && errors.length )
+                    ul
+                        each messageError in errors
+                            li= messageError
+                div
+                    input(type="submit" value="Submit" class="btn btn-primary")
